@@ -123,27 +123,31 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-brand {
   font-family: var(--display);
-  font-size: clamp(2.8rem, 8vw, 5.8rem);
+  font-size: clamp(3.2rem, 9.5vw, 7rem);
   font-weight: 800;
   letter-spacing: -0.045em;
-  line-height: 0.9;
-  margin: 0 0 16px;
+  line-height: 0.88;
+  margin: 0 0 18px;
   color: #f2f5fa;
 }
 .hero-brand span { display: block; color: var(--accent-2); }
-.hero h1, .page-hero h1 {
+.hero-line {
   font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  line-height: 1.15;
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  line-height: 1.25;
   letter-spacing: -0.02em;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: #e8edf5;
+  max-width: 28ch;
 }
 .page-hero h1 {
+  font-family: var(--display);
+  font-weight: 700;
   font-size: clamp(2.4rem, 5.5vw, 4.4rem);
   line-height: 0.96;
   letter-spacing: -0.035em;
+  margin: 0 0 18px;
   color: #f2f5fa;
 }
 .hero p { max-width: 34rem; color: var(--mute); font-size: 17px; }
@@ -310,4 +314,47 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 800px) {
   .foot-grid { grid-template-columns: 1fr; }
+}
+
+/* Chemistry family list (vision/chemistry.html) */
+.chem-grid {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(7, 9, 12, 0.12);
+}
+.chem {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(7, 9, 12, 0.12);
+  align-items: baseline;
+}
+.chem small {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1d4ed8;
+  grid-row: 1 / span 2;
+}
+.chem strong {
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #07090c;
+}
+.chem p {
+  margin: 0;
+  color: #5a6575;
+  font-size: 14px;
+  grid-column: 2;
+}
+@media (max-width: 640px) {
+  .chem {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .chem small { grid-row: auto; }
+  .chem p { grid-column: auto; }
 }
